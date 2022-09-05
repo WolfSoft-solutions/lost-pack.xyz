@@ -15,8 +15,6 @@ a {
   box-sizing: border-box;
 }
 
-
-
 .container {
   padding: 0 2rem;
   background: #252828ee;
@@ -86,6 +84,10 @@ a {
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+code {
+  color: #ddd36f
+}
+
 .grid {
   display: flex;
   align-items: center;
@@ -111,7 +113,7 @@ a {
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  max-width: 320px;
 }
 
 .card2 {

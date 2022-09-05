@@ -2,10 +2,31 @@
 <html lang="en">
     <head>
         <%- include('includes/head', { title: "Home", description: "Welcome to The Lost Pack Developements website."}) %>
+        <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
         <div class="container">
-            <h1>Welcome on our website!</h1>
+            <main class="main">
+                <h6 class="title">
+                    Welcome on the official website of <code>The Lost Pack Development</code>
+                </h6>
+
+                <p class="description">
+                    About the group:<br>
+                        Our group is for people who want to develop bots, websites and other things, or if you need help you can ask us in <a href="https://discord.com/invite/TN7U5SvTHw" >our discord server</a>.<br>We make discord bots, websites and more things!
+                </p>
+                <div class="grid">
+                    <a href="https://github.com/orgs/The-Lost-Pack-Development/repositories" class="card">
+                        <h2><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style="width: 10%" /> Our github &rarr;</h2>
+                        <p>View our projects and code on our github!</p>
+                    </a>
+
+                    <a href="https://discord.com/invite/TN7U5SvTHw" class="card">
+                        <h2><img src="https://www.freepnglogos.com/uploads/discord-logo-png/concours-discord-cartes-voeux-fortnite-france-6.png" style="width: 10%" /> Our discord server &rarr;</h2>
+                        <p>Join our discord server to test out our bots and more!</p>
+                    </a>
+                </div>
+            </main>
         </div>
     </body>
 </html>
