@@ -15,6 +15,10 @@ a {
   box-sizing: border-box;
 }
 
+span {
+  color: #ddd36f;
+}
+
 .container {
   padding: 0 2rem;
   background: #252828ee;
@@ -48,7 +52,7 @@ a {
 }
 
 .title a {
-  color: #0070f3;
+  color: #ddd36f;
   text-decoration: none;
 }
 
@@ -131,25 +135,25 @@ code {
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0077ff;
+  color: #ddd36f;
+  border-color: #ddd36f;
 }
 
 .card2:hover,
 .card2:focus,
 .card2:active {
-  color: #0070f3;
-  border-color: #0077ff;
+  color: #ddd36f;
+  border-color: #ddd36f;
 }
 
 li p a:hover {
-  color: #0070f3;
-  border-color: #0077ff;
+  color: #ddd36f;
+  border-color: #ddd36f;
 }
 
 p a:hover {
-  color: #0070f3;
-  border-color: #0077ff;
+  color: #ddd36f;
+  border-color: #ddd36f;
 }
 
 
@@ -233,6 +237,6 @@ b {
 }
 
 .footer2 a:hover {
-  color: #0070f3;
+  color: #ddd36f;
   border-color: #0077ff;
 }

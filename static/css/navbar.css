@@ -1,0 +1,19 @@
+.nav {
+    margin: auto;
+    margin-left: 45%;
+    padding: 10px;
+}
+
+.nav a:hover {
+    color: #ddd36f;
+    border-color: #ddd36f;
+}
+
+.nav a {
+    border: 1px solid transparent;
+    padding: 3px;
+}
+
+.active {
+    color: #ddd36f
+}

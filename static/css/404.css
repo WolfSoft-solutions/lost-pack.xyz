@@ -15,7 +15,9 @@ a {
   box-sizing: border-box;
 }
 
-
+span {
+  color: #ddd36f;
+}
 
 .container {
   padding: 0 2rem;

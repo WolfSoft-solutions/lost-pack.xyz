@@ -3,18 +3,20 @@
     <head>
         <%- include('includes/head', { title: "404", description: "The whole pack was searching for the page you are looking for, but couldn't find it"}) %>
         <link rel="stylesheet" href="/css/404.css">
+        
     </head>
     <body>
         <div class="container">
             <main class="main">
                 <h1 class="title">
-                  404
+                    404 Could not find a page at: <span id="link"></span>
                 </h1>
 
                 <p class="description">
-                    Sorry we couldn't find this page!<br>
+                    No one in our pack could find the page you're looking for...<br>
                 </p>
             </main>
         </div>
     </body>
+    <script src="/js/404.js"></script>
 </html>

@@ -8,11 +8,19 @@ app.set('view engine', 'ejs');
 app.use(express.static('static'));
 
 app.get('/', (req, res) => {
-    res.status(200).render('pages/home');
+    res.status(200).redirect("/home");
 });
 
-app.get('/members', (req, res) => {
-  res.status(200).render('pages/members');
+app.get('/home', (req, res) => {
+  res.status(200).render('pages/home');
+});
+
+app.get('/github', (req, res) => {
+  res.status(200).redirect('https://github.com/The-Lost-Pack-Development');
+});
+
+app.get('/discord', (req, res) => {
+  res.status(200).redirect('https://discord.com/invite/TN7U5SvTHw');
 });
 
 for(const folder of Folders){
@@ -24,7 +32,6 @@ for(const folder of Folders){
     });
   }
 }
-
 
 app.get('*', (req, res) => {
   res.status(404).render('pages/404');
