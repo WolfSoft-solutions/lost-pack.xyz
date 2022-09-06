@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/auth/discord', (req, res) => {
-	return res.status(200).redirect('/request');
+	res.status(200).redirect('/request');
 });
 
 app.get('/home', (req, res) => {
