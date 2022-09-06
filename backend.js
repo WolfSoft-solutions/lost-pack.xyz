@@ -8,11 +8,15 @@ app.set('view engine', 'ejs');
 app.use(express.static('static'));
 
 app.get('/', (req, res) => {
-    res.status(200).redirect("/home");
+  res.status(200).redirect("/home");
 });
 
 app.get('/home', (req, res) => {
   res.status(200).render('pages/home');
+});
+
+app.get('/request', (req, res) => {
+  res.status(200).render('pages/request');
 });
 
 app.get('/github', (req, res) => {
