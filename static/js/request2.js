@@ -1,14 +1,22 @@
 function sendMessage() {
-    const request = new XMLHttpRequest();
-    request.open("POST", "https://discordapp.com/api/webhooks/676118118082281513/ZS5YcWhurzokBrKX9NgexqtxrJA5Pu2Bo4i7_JsIxC-JIbPBVhSZkcVVukGOro52rnQA");
+  const request = new XMLHttpRequest();
+  request.open("POST", "https://canary.discord.com/api/webhooks/1016721322119790753/XFWJytDqVJO3ujtJB3AcHlk1bSGrJ65s1qQNdgL9CFNNmj-hi_oGR4gHIFMrBx_UvhYR");
+  request.setRequestHeader('Content-type', 'application/json');
 
-    request.setRequestHeader('Content-type', 'application/json');
+  const params = {
+      avatar_url: "",
+      embeds: [{
+          "title": "New Request!",
+          "description": `User: ${document.getElementById(`username`).value} | ${document.getElementById('D-ID').value}\nContact e-mail: ${document.getElementById('email').value}`,
+          "fields": [
+              { "name": `Type of request`, "value": `${document.getElementById('kind').value}` },
+              { "name": `Description of the project`, "value": `${document.getElementById('description').value}`}
+          ],
+          "color": "14537583",
+          "thumbnail": {"url": `${document.getElementById('avatar').src}`}
+      }],
+      content: "<@271285474516140033> New request"
+  }
 
-    const params = {
-      username: "My Webhook Name",
-      avatar_url: "https://cdn.discordapp.com/avatars/271285474516140033/6f773ebd86a348c0cdb8be32bf44985e.jpg",
-      content: "The message to send"
-    }
-
-    request.send(JSON.stringify(params));
+  request.send(JSON.stringify(params));
 }
