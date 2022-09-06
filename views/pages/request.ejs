@@ -1,23 +1,82 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <%- include('includes/head', { title: "Home", description: "Welcome to The Lost Pack Developements website."}) %>
+        <%- include('includes/head', { title: "Request", description: "Request a project"}) %>
         <link rel="stylesheet" href="/css/home.css">
+        <script type="text/javascript" src="/js/request.js"></script>
+        <base href="/">
     </head>
     <body>
         <div class="container">
             <%- include('includes/header', { active: "home" }) %>
             <main class="main">
-                <h6 class="title">
+                <div class="data">
+                    <img src="" id="avatar" alt="Avatar" style="border-radius: 100px; max-width: 100%">
+                    <a href='' id="linkToUser" ><h2 id="name"></h2></a>
+                    
+                </div>
+                <h6 class="title3">
                     Request something we (<code>The Lost Pack Development</code>) can code for you!
                 </h6>
 
-                <p class="description">
-                    About the group:<br>
-                        Our group is for people who want to develop <span>bots</span>, <span>websites</span> and other things, or if you need help you can ask us in <a href="https://discord.com/invite/TN7U5SvTHw" >our discord server</a>.<br>We make <span>discord bots</span>, <span>websites</span> and more things!
-                </p>
-                
+                <hr style="border-color: transparent"><hr style="border-color: transparent"><hr style="border-color: transparent"><hr style="border-color: transparent">
+
+                <form>
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" name="username" disabled><br>
+
+                    <label for="userId">User ID: </label>
+                    <input type="text" id="D-ID" name="userId" disabled><br>
+
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" disabled>
+
+                    <br><br>
+
+                    <label for="kind"><i style="color: red">*</i> Do you want a "<code>website</code>" or do you want a "<code>discord bot</code>": </label>
+                    <input type="text" id="kind" name="kind" required><br>
+
+                    <label for="description"><i style="color: red">*</i> Explain the features/pages you want: </label>
+                    <input type="text" name="description" id="description" required/><br>
+
+                    <label for="checkbox1"><i style="color: red">*</i> You agree that this costs money, and that you will get an email after submitting the request: </label>
+                    <input type="checkbox" required ><br>
+
+                    <label for="checkbox2"><i style="color: red">*</i> You agree to our <a href='/terms'>terms of service</a> and <a href="/privacy">privacy policy</a>: </label>
+                    <input type="checkbox" required ><br><br>
+
+                    <input type="submit" onClick="sendMessage()" value="Submit this form">
+                </form>
             </main>
         </div>
     </body>
+    <style>
+        a:hover {
+            color: #ddd36f;
+        }
+    </style>
+        <script>
+            function sendMessage() {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://canary.discord.com/api/webhooks/1016721322119790753/XFWJytDqVJO3ujtJB3AcHlk1bSGrJ65s1qQNdgL9CFNNmj-hi_oGR4gHIFMrBx_UvhYR");
+                request.setRequestHeader('Content-type', 'application/json');
+
+                const params = {
+                    avatar_url: "",
+                    embeds: [{
+                        "title": "New Request!",
+                        "description": `User: ${document.getElementById(`username`).value} | ${document.getElementById('D-ID').value}\nContact e-mail: ${document.getElementById('email').value}`,
+                        "fields": [
+                            { "name": `Type of request`, "value": `${document.getElementById('kind').value}` },
+                            { "name": `Description of the project`, "value": `${document.getElementById('description').value}`}
+                        ],
+                        "color": "14537583",
+                        "thumbnail": {"url": `${document.getElementById('avatar').src}`}
+                    }],
+                    content: "<@271285474516140033> New request"
+                }
+            
+                request.send(JSON.stringify(params));
+            }
+        </script>
 </html>
