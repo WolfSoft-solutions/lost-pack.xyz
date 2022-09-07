@@ -35,31 +35,9 @@ span {
   align-items: center;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
 .title a {
   color: #0070f3;
   text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
 }
 
 .title {
@@ -79,142 +57,9 @@ span {
   font-size: 1.5rem;
 }
 
-.code {
-  background: #b18686;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.grid2 {
-  display: block;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card2 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  min-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0077ff;
-}
-
-.card2:hover,
-.card2:focus,
-.card2:active {
-  color: #0070f3;
-  border-color: #0077ff;
-}
-
-li p a:hover {
-  color: #0070f3;
-  border-color: #0077ff;
-}
-
-p a:hover {
-  color: #0070f3;
-  border-color: #0077ff;
-}
-
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.card2 h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card2 p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
 .logo {
   height: 10em;
   margin-left: 1rem;
-}
-
-
-
-.command {
-  align-items: center;
-  border-radius: 10px;
-  border: 1px solid #ffffff;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-top: 10px;
-}
-
-.command:hover {
-  border-color: #0077ff;
-}
-
-.command h2 {
-  text-align: center;
-  color: #0077ff;
-}
-
-.command {
-  text-align: center;
-}
-
-b {
-  color: #0077ff;
-}
-
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
 }
 
 @media (max-width: 600px) {
@@ -230,9 +75,4 @@ b {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-}
-
-.footer2 a:hover {
-  color: #0070f3;
-  border-color: #0077ff;
 }

@@ -4,7 +4,7 @@ const fs = require('fs');
 const port = 3000;
 const Folders = fs. readdirSync('./api');
 const path = require('path');
-
+const memberFiles = fs. readdirSync('./views/pages/member-pages/');
 
 app.set('view engine', 'ejs');
 app.use(express.static('static'));
@@ -45,6 +45,17 @@ for(const folder of Folders){
       res.status(200).sendFile(__dirname + '/api/' + folder+ `/` + file);
     });
   }
+}
+
+app.get('/members', (req, res) => {
+  res.status(200).render('pages/members')
+});
+
+for (const file of memberFiles) {
+  const defFile = file.replace('.ejs', '');
+  app.get('/members/' + defFile, (req, res) => {
+    res.status(200).render(__dirname + '/views/pages/member-pages/'+ file);
+  });
 }
 
 app.get('*', (req, res) => {
