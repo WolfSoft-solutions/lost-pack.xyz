@@ -3,7 +3,6 @@ const app = express();
 const fs = require('fs');
 const port = 3000;
 const Folders = fs. readdirSync('./api');
-const path = require('path');
 const memberFiles = fs. readdirSync('./views/pages/member-pages/');
 
 app.set('view engine', 'ejs');
