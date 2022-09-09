@@ -1,7 +1,8 @@
 .nav {
-    margin: auto;
-    margin-left: 43%;
-    padding: 10px;
+    width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #252828ee
 }
 
 .nav a:hover {
@@ -15,5 +16,6 @@
 }
 
 .active {
-    color: #ddd36f
+    color: #ddd36f;
+    border-color: #ddd36f;
 }

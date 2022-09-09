@@ -26,7 +26,7 @@ app.get('/request', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.status(200).redirect('https://discord.com/api/oauth2/authorize?client_id=1004745499536015501&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fdiscord&response_type=token&scope=identify%20email')
-})
+});
 
 app.get('/github', (req, res) => {
   res.status(200).redirect('https://github.com/The-Lost-Pack-Development');
@@ -34,6 +34,18 @@ app.get('/github', (req, res) => {
 
 app.get('/discord', (req, res) => {
   res.status(200).redirect('https://discord.com/invite/TN7U5SvTHw');
+});
+
+app.get('/privacy', (req, res) => {
+  res.status(200).render('pages/privacy');
+});
+
+app.get('/terms', (req, res) => {
+  res.status(200).render('pages/terms');
+});
+
+app.get('/disclaimer', (req, res) => {
+  res.status(200).render('pages/disclaimer');
 });
 
 for(const folder of Folders){
