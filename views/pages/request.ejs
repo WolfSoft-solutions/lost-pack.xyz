@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="/css/home.css">
         <script type="text/javascript" src="/js/request.js"></script>
         <base href="/">
+        <script src="/js/request2.js"></script>
     </head>
     <body>
         <div class="container">
@@ -21,7 +22,7 @@
 
                 <hr style="border-color: transparent"><hr style="border-color: transparent"><hr style="border-color: transparent"><hr style="border-color: transparent">
 
-                <form>
+                <form onsubmit="sendMessage()">
                     <label for="username">Username: </label>
                     <input type="text" id="username" name="username" disabled><br>
 
@@ -45,7 +46,7 @@
                     <label for="checkbox2"><i style="color: red">*</i> You agree to our <a href='/terms'>terms of service</a> and <a href="/privacy">privacy policy</a>: </label>
                     <input type="checkbox" required ><br><br>
 
-                    <input type="submit" onClick="sendMessage()" value="Submit this form">
+                    <input type="submit" value="Submit this form">
                 </form>
             </main>
         </div>
@@ -55,5 +56,4 @@
             color: #ddd36f;
         }
     </style>
-        <script src="/js/request2.js"></script>
 </html>

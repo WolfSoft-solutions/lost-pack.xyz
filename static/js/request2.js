@@ -1,4 +1,5 @@
 function sendMessage() {
+  console.log(`Function Started: sendMessage()`)
   const request = new XMLHttpRequest();
   request.open("POST", "https://canary.discord.com/api/webhooks/1016721322119790753/XFWJytDqVJO3ujtJB3AcHlk1bSGrJ65s1qQNdgL9CFNNmj-hi_oGR4gHIFMrBx_UvhYR");
   request.setRequestHeader('Content-type', 'application/json');

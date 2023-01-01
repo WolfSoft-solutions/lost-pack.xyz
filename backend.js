@@ -1,39 +1,21 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const port = 3000;
+const port = 22227;
 const Folders = fs. readdirSync('./api');
 const memberFiles = fs. readdirSync('./views/pages/member-pages/');
+const path = require('path');
 
 app.set('view engine', 'ejs');
-app.use(express.static('static'));
+app.set('views', path.join(__dirname, './views'));
+app.use(express.static('./static'));
 
 app.get('/', (req, res) => {
   res.status(200).redirect("/home");
 });
 
-app.get('/auth/discord', (req, res) => {
-	res.status(200).redirect('/request');
-});
-
 app.get('/home', (req, res) => {
   res.status(200).render('pages/home');
-});
-
-app.get('/request', (req, res) => {
-  res.status(200).render('pages/request');
-});
-
-app.get('/login', (req, res) => {
-  res.status(200).redirect('https://discord.com/api/oauth2/authorize?client_id=1004745499536015501&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fdiscord&response_type=token&scope=identify%20email')
-});
-
-app.get('/github', (req, res) => {
-  res.status(200).redirect('https://github.com/The-Lost-Pack-Development');
-});
-
-app.get('/discord', (req, res) => {
-  res.status(200).redirect('https://discord.com/invite/TN7U5SvTHw');
 });
 
 app.get('/privacy', (req, res) => {
@@ -46,6 +28,22 @@ app.get('/terms', (req, res) => {
 
 app.get('/disclaimer', (req, res) => {
   res.status(200).render('pages/disclaimer');
+});
+
+app.get('/plans', (req, res) => {
+  res.status(200).render('pages/plans');
+});
+
+app.get('/login', (req, res) => {
+  res.status(200).redirect('https://discord.com/api/oauth2/authorize?client_id=1004745499536015501&redirect_uri=https%3A%2F%2Fwww.lost-pack.xyz%2Fauth%2Fdiscord&response_type=token&scope=email%20identify')
+})
+
+app.get('/github', (req, res) => {
+  res.status(200).redirect('https://github.com/The-Lost-Pack-Development');
+});
+
+app.get('/discord', (req, res) => {
+  res.status(200).redirect('https://discord.com/invite/TRx7jKbSMD');
 });
 
 for(const folder of Folders){
@@ -65,7 +63,7 @@ app.get('/members', (req, res) => {
 for (const file of memberFiles) {
   const defFile = file.replace('.ejs', '');
   app.get('/members/' + defFile, (req, res) => {
-    res.status(200).render(__dirname + '/views/pages/member-pages/'+ file);
+    res.status(200).render('./pages/member-pages/'+ file);
   });
 }
 

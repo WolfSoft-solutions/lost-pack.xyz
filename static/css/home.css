@@ -5,10 +5,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
+#projects {
+    text-align: center;
+}
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  color: #ddd36f;
+  border-color: #ddd36f;
 }
 
 * {
@@ -16,13 +23,21 @@ a {
 }
 
 .container {
-  padding: 0 2rem;
   background: #252828ee;
   color: #ffffffee;
+  min-height: 100vh;
 }
 
 .main {
   min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -58,12 +73,19 @@ code {
   color: #ddd36f
 }
 
+.links {
+    text-align: center;
+}
+
+
 .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
@@ -107,11 +129,47 @@ p a:hover {
   margin-left: 1rem;
 }
 
+.discord_bots {
+  background-image: url("../images/background_discord_bots.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+
+.websites {
+  background-image: url("../images/Websites_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  
+}
+
+.banner-background {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  width: 100%;
+}
+
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+    .title {
+        margin: 0;
+  		line-height: 1.15;
+  		font-size: 2rem;
+    }
+  	.grid {
+    	width: 100%;
+    	flex-direction: column;
+  	}
 }
 
 @font-face {
