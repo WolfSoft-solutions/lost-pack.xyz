@@ -18,6 +18,10 @@ app.get('/home', (req, res) => {
   res.status(200).render('pages/home');
 });
 
+app.get('/dmca-validation.html', (req, res) => {
+  res.status(200).sendFile('pages/dmca-validation.html');
+});
+
 app.get('/privacy', (req, res) => {
   res.status(200).render('pages/privacy');
 });
