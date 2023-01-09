@@ -22,6 +22,14 @@ app.get('/dmca-validation.html', (req, res) => {
   res.status(200).sendFile(__dirname + '/views/pages/dmca-validation.html');
 });
 
+app.get('/github', (req, res) => {
+  res.status(200).redirect('https://github.com/The-Lost-Pack-Development');
+});
+
+app.get('/discord', (req, res) => {
+  res.status(200).redirect('https://discord.com/invite/TRx7jKbSMD');
+});
+
 app.get('/privacy', (req, res) => {
   res.status(200).render('pages/privacy');
 });

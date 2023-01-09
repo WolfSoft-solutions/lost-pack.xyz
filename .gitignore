@@ -1,3 +1,4 @@
 node_modules/
 api/
 static/images/api-images/
+/views/pages/dmca-validation.html
