@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const port = 22227;
+const port = 55595;
 const Folders = fs. readdirSync('./api');
 const memberFiles = fs. readdirSync('./views/pages/member-pages/');
 const path = require('path');
