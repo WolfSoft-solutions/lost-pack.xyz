@@ -26,6 +26,10 @@ app.get('/alpha-wolf/tos', (req, res) => {
   res.status(200).sendFile(__dirname + '/views/pages/alpha-wolf/tos.html');
 });
 
+app.get('/alpha-wolf/privacy', (req, res) => {
+  res.status(200).sendFile(__dirname + '/views/pages/alpha-wolf/privacy.html');
+});
+
 app.get('/github', (req, res) => {
   res.status(200).redirect('https://github.com/The-Lost-Pack-Development');
 });
