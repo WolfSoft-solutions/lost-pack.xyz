@@ -22,6 +22,10 @@ app.get('/dmca-validation.html', (req, res) => {
   res.status(200).sendFile(__dirname + '/views/pages/dmca-validation.html');
 });
 
+app.get('/.well-known/discord', (req, res) => {
+  res.status(200).sendFile(__dirname + '/views/pages/discord.html');
+});
+
 app.get('/alpha-wolf/tos', (req, res) => {
   res.status(200).sendFile(__dirname + '/views/pages/alpha-wolf/tos.html');
 });
